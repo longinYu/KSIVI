@@ -1,0 +1,53 @@
+## ustat
+# target_score: "LRwaveform"
+# kernel: "gaussian" # "gaussian","IMQ"
+# train:
+#     SIMI: "SIMINet"
+#     num_epochs: 400
+#     num_perepoch: 100
+#     batchsize: 100  # ustat 100, vanilla 100
+#     sto_batchsize: 400
+#     lr_SIMI: 0.001
+#     lr_SIMI_var: 0.001
+#     gamma: 0.9
+#     gamma_step: 3000
+#     z_dim: 10
+#     h_dim: 100
+#     out_dim: 22
+#     annealing: False
+#     train_vis_inepoch: 50
+#     warm_ratio: 2
+#     log_var_ini: -2
+#     log_var_min: -20
+    
+# sampling:
+#     visual_time: 100
+#     num: 1000
+
+
+
+# vanilla
+target_score: "LRwaveform"
+kernel: "gaussian" # "gaussian","IMQ"
+train:
+    SIMI: "SIMINet"
+    num_epochs: 200
+    num_perepoch: 100
+    batchsize: 100  # ustat 100, vanilla 100
+    sto_batchsize: 400
+    lr_SIMI: 0.001
+    lr_SIMI_var: 0.001
+    gamma: 0.9
+    gamma_step: 3000
+    z_dim: 10
+    h_dim: 100
+    out_dim: 22
+    annealing: False
+    train_vis_inepoch: 50
+    warm_ratio: 2
+    log_var_ini: -5
+    log_var_min: -20
+    
+sampling:
+    visual_time: 100
+    num: 1000

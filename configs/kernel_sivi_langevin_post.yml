@@ -1,0 +1,97 @@
+## 100, 20 paper 
+target_score: "Langevin_post"
+kernel: "gaussian" # "gaussian","IMQ"
+num_interval: 100
+num_obs: 20
+beta: 10
+T: 1.0
+sigma: 0.1
+train:
+    SIMI: "SIMINet"
+    num_epochs: 1000
+    num_perepoch: 100
+    batchsize: 128 # 256
+    ema: 0
+    lr_SIMI: 0.0002
+    lr_SIMI_var: 0.0002
+    gamma: 0.9
+    gamma_step: 10000
+    z_dim: 100 # 3
+    h_dim: 128 # 10
+    out_dim: 100
+    annealing: False
+    train_vis_inepoch: 50
+    warm_ratio: 2
+    log_var_ini: -2.0
+    log_var_min: -12
+    
+sampling:
+    visual_time: 10
+    num: 1000
+
+
+
+## 50, 10 ablation
+# target_score: "Langevin_post"
+# kernel: "IMQ" # "laplace","gaussian","IMQ"
+# num_interval: 50
+# num_obs: 10
+# beta: 10
+# T: 1.0
+# sigma: 0.1
+# train:
+#     SIMI: "SIMINet"
+#     num_epochs: 1000
+#     num_perepoch: 100
+#     batchsize: 128 # 256
+#     ema: 0
+#     lr_SIMI: 0.0002
+#     lr_SIMI_var: 0.0002
+#     gamma: 0.9
+#     gamma_step: 10000
+#     z_dim: 100 # 3
+#     h_dim: 128 # 10
+#     out_dim: 50
+#     annealing: False
+#     # use_vr: False
+#     train_vis_inepoch: 50
+#     warm_ratio: 2
+#     log_var_ini: -2.0
+#     log_var_min: -12
+    
+# sampling:
+#     visual_time: 10
+#     num: 1000
+
+
+## 200, 40 ablation
+# target_score: "Langevin_post"
+# kernel: "gaussian" # "laplace","gaussian","IMQ"
+# num_interval: 200
+# num_obs: 40
+# beta: 10
+# T: 1.0
+# sigma: 0.1
+# train:
+#     SIMI: "SIMINet"
+#     num_epochs: 1000
+#     num_perepoch: 100
+#     batchsize: 128 # 256
+#     ema: 0
+#     lr_SIMI: 0.0002
+#     lr_SIMI_var: 0.0002
+#     gamma: 0.9
+#     gamma_step: 10000
+#     z_dim: 100 # 3
+#     h_dim: 128 # 10
+#     out_dim: 200
+#     annealing: False
+#     # use_vr: False
+#     train_vis_inepoch: 50
+#     warm_ratio: 2
+#     log_var_ini: -2.0
+#     log_var_min: -12
+    
+# sampling:
+#     visual_time: 10
+#     num: 1000

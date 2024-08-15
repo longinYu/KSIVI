@@ -1,0 +1,23 @@
+target_score: "multimodal"
+kernel: "IMQ" 
+train:
+    SIMI: "SIMINet"
+    num_epochs: 500
+    num_perepoch: 100
+    batchsize: 500
+    lr_SIMI: 0.001
+    gamma: 0.9
+    gamma_step: 1000
+    z_dim: 3
+    h_dim: 50
+    out_dim: 2
+    annealing: True # False
+    detach: False
+    ustat: False # True
+    warm_ratio: 2.0
+    log_var_ini: 0
+    log_var_min: -20
+
+sampling:
+    visual_time: 10
+    num: 1000

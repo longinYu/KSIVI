@@ -1,0 +1,30 @@
+target_score: "Bnn_boston"
+kernel: "gaussian" # "laplace","gaussian","IMQ"
+train:
+    SIMI: "SIMINet"
+    num_epochs: 200
+    num_perepoch: 100
+    batchsize: 100  
+    sto_batchsize: 100 
+    pre_lr: 0.01 # 0.01, 0.001
+    pre_iters_num: 100 # 100, 2000
+    lr_SIMI: 0.001          # 0.001, 0.0001, 0.0002, 0.0004
+    lr_SIMI_var: 0.001
+    ema: 0.999
+    gradient_clip: True
+    reg_logp: True # False
+    gamma: 0.9
+    gamma_step: 3000
+    z_dim: 3
+    h_dim: 10
+    out_dim: 751
+    annealing: False
+    ustat: False
+    warm_ratio: 4.0
+    log_var_ini: -8 # 0, -2, -4, -6, -8
+    log_var_min: -20
+
+    
+sampling:
+    visual_time: 20
+    num: 100

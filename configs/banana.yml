@@ -1,0 +1,23 @@
+target_score: "banana"
+kernel: "gaussian" # "IMQ"
+train:
+    SIMI: "SIMINet"
+    num_epochs: 500
+    num_perepoch: 100
+    batchsize: 500 
+    lr_SIMI: 0.001
+    gamma: 0.9
+    gamma_step: 1000
+    z_dim: 3
+    h_dim: 50
+    out_dim: 2
+    annealing: False 
+    detach: False # True
+    ustat: False # True
+    warm_ratio: 2
+    log_var_ini: -1.3862943611198906
+    log_var_min: -20
+    
+sampling:
+    visual_time: 10
+    num: 1000
